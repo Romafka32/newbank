@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bankdb?currentSchema=public
+    username: postgres
+    password: aeT4B2sN!
+  flyway:
+    url: jdbc:postgresql://localhost:5432/bankdb
+    schemas: bank
+    user: postgres
+    password: aeT4B2sN!
