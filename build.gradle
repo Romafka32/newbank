@@ -26,6 +26,9 @@ dependencies {
 	testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
 	implementation 'org.postgresql:postgresql:42.2.16'
+
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 }
 
 tasks.named('test') {

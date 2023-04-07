@@ -1,6 +1,7 @@
 package ru.kuznetsov.bank.controller;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import ru.kuznetsov.bank.model.Card;
@@ -10,7 +11,7 @@ import java.math.BigDecimal;
 
 @Slf4j
 @RestController("/card")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class CardController {
 
 

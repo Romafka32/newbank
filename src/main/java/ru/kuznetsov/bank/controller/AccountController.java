@@ -1,15 +1,17 @@
 package ru.kuznetsov.bank.controller;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
+import ru.kuznetsov.bank.dto.AccountDTO;
 import ru.kuznetsov.bank.model.Account;
 import ru.kuznetsov.bank.service.BankService;
 
 import java.math.BigDecimal;
 @Slf4j
 @RestController("/account")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class AccountController {
 
 
@@ -17,14 +19,14 @@ public class AccountController {
 
     //http://localhost:8080/kuzoff/account?id=1
     @GetMapping
-    public Account getBalance(@RequestParam Integer id) throws IllegalAccessException {
-        return new Account();
+    public AccountDTO getBalance(@RequestParam Integer id) throws IllegalAccessException {
+        return new AccountDTO();
     }
 
     //http://localhost:8080/kuzoff/account
     @PostMapping
-    public BigDecimal addMoney(@RequestBody Account account) {
-        return null;
+    public AccountDTO addMoney(@RequestBody Account account) {
+        return new AccountDTO();
     }
 
     //http://localhost:8080/kuzoff/account?id=1
